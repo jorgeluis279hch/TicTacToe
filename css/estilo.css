@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(58, 66, 82);
+  min-width: 320px;
+  color: rgb(186, 139, 52);
+}
+.container {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid orange;
+  padding: 0px 5px;
+  color: orange;
+
+  /* position: absolute; */
+}
+input:focus {
+  outline: none;
+}
+.icon-user {
+  margin-right: 5px;
+  
+}
+.reg {
+  width: 300px;
+  padding: 20px;
+  max-height: 1000px;
+  border: 1px solid orange;
+  margin:auto;
+  transition: all .4s;
+}
+.entrada {
+  margin-bottom: 40px;
+  position: relative;
+  
+}
+#logo {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+}
+#name-game {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  pointer-events: none;
+  font-size: 1rem;
+
+  transition-property: top, font-size;
+  transition-duration: .3s;
+}
+.line {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.line::before, 
+.line::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  background-color: orange;
+
+  transition-property: left, right, width;
+  transition-duration: .3s;
+}
+.line::before {
+  left: 50%;
+}
+.line::after{
+  right: 50%;
+}
+
+input:focus ~ .line::after,
+input:focus ~ .line::before {
+  width: 50%;
+}
+
+
+input:focus ~ .etiqueta,
+input:valid ~ .etiqueta {
+  top: -15px;
+  font-size: .8rem;
+  color: orange;
+}
+
+.hidden {
+  transform: translateY(-150%);
+  max-height: 0;
+  overflow: hidden;
+}
+
+#btn-start {
+  background-color: rgb(243, 165, 21);
+  font-family: inherit;
+  font-size: 1rem;
+  color: rgba(33, 31, 31, 0.878);
+}
+#btn-start:hover {
+  opacity: .8;
+}
+
+.board {
+  display: flex;
+  visibility: visible;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  transition-property: visibility;
+  transition-duration: .4s;
+}
+.cuadrantes {
+  width: 50px;
+  display:inline-block;
+  height: 50px;
+  background-color: rgb(233, 186, 31);
+  margin: 5px;
+}
+
+.board__table {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 230px;
+  min-width: 200px;
+}
+
+.icon-cross,
+.icon-radio-unchecked {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  color:black;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#btn__restart,
+#btn__reinit {
+  margin: 10p auto;
+  height: 40px;
+  width: 200px;
+  background-color: rgb(34, 35, 36);
+  padding: 10px;
+} 
+
+.not-show {
+  visibility: hidden;
+}
+
+.info__turno {
+  padding: 10px 20px;
+  background-color: yellow;
+  color: black;
+  margin-right: 20px;
+}
+
+.win-cuadrante {
+  background-color: chartreuse;
+}
+
+
+.info__puntaje {
+  margin: 20px 0px;
+}
+
+#jugador-uno, 
+#jugador-dos {
+  margin: 20px;
+  display: table-row;
+}
+#gamers{
+  border-collapse: collapse;
+  table-layout: auto;
+}
+#gamers th, td {
+  /* border: 1px solid black; */
+}

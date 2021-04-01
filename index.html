@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./icons/style.css">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="container">
+      <div class="reg">
+        <div id="logo">
+          <span class="icon-delicious"></span>
+        </div>
+        <h4 id="name-game">TIC TAC TOE ! </h4>
+        <form action="#" class="register">
+          <div class="entrada">
+            <input type="text" name="userOne" id="userOne" required>
+            <span class="line"></span>
+            <label class="etiqueta"><span class="icon-user"></span>Jugador 1(nombre) | Simbolo O</label>
+          </div>
+          <div class="entrada">
+            <input type="text" name="userTwo" id="userTwo" required>
+            <span class="line"></span>
+            <label class="etiqueta"><span class="icon-user"></span>Jugador 2(nombre) | Simbolo X</label>
+          </div>
+          <input id="btn-start" type="button" value="INICIAR" onclick="register(event)">
+        </form>
+      </div>
+
+      <div class="board not-show">
+        <div class="board__table">
+          <div data-val="1" class="cuadrantes"></div>
+          <div data-val="2" class="cuadrantes"></div>
+          <div data-val="3" class="cuadrantes"></div>
+          <div data-val="4" class="cuadrantes"></div>
+          <div data-val="5" class="cuadrantes"></div>
+          <div data-val="6" class="cuadrantes"></div>
+          <div data-val="7" class="cuadrantes"></div>
+          <div data-val="8" class="cuadrantes"></div>
+          <div data-val="9" class="cuadrantes"></div> 
+        </div>
+          
+        <div class="info">
+          <div class="info__turno"></div>
+          <div class="info__puntaje">
+            <table id="gamers">
+              <thead>
+                <tr>
+                  <th>Puntaje </th>
+                  <th>Jugadores</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="puntaje__uno"></td>
+                  <td id="jugador-uno"></td>
+                </tr>
+                <tr>
+                  <td id="puntaje__dos"></td>
+                  <td id="jugador-dos"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="controls">
+          <input onclick="reset()" id="btn__restart" type="button" value="Jugar otra vez">
+          <input onclick="clearLocal()" id="btn__reinit" type="submit" value="Inicio">
+        </div> 
+      </div>
+  <script src="./js/main.js"></script>   
+</body>
+</html>
